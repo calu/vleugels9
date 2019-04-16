@@ -7,3 +7,4 @@
     <title>{{ config('app.name', 'Vleugels') }}</title>
         
     <link href="{{ asset('styles/bootstrap-4.1.2/bootstrap.min.css') }}" rel="stylesheet" text="text/css">    
+    <link href="{{ asset('styles/main_styles.css') }}" rel="stylesheet" text="text/css">    
