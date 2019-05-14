@@ -1787,6 +1787,193 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VraagFormulier.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/VraagFormulier.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: new Form({
+        voornaam: '',
+        familienaam: '',
+        relatie: '',
+        straat: '',
+        huisnummer: '',
+        bus: '',
+        postcode: '',
+        gemeente: '',
+        telefoon: '',
+        gsm: '',
+        email: '',
+        rubriek: '',
+        vraag: ''
+      }),
+      facturatieCollapse: 0
+    };
+  },
+  methods: {
+    onSubmit: function onSubmit() {
+      var _this = this;
+
+      this.form.post('/contactpersonen').then(function (data) {
+        return _this.$emit('completed', data);
+      })["catch"](function (errors) {
+        return console.log(errors);
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -36861,6 +37048,629 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VraagFormulier.vue?vue&type=template&id=26c9cc0a&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/VraagFormulier.vue?vue&type=template&id=26c9cc0a& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        attrs: { method: "POST", action: "/contactpersonen" },
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.onSubmit($event)
+          },
+          keydown: function($event) {
+            return _vm.form.errors.clear($event.target.name)
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "form-group col-md-6" }, [
+            _c("label", { attrs: { for: "voornaam" } }, [_vm._v("voornaam")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.voornaam,
+                  expression: "form.voornaam"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                placeholder: "voornaam",
+                name: "voornaam",
+                id: "voornaam"
+              },
+              domProps: { value: _vm.form.voornaam },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "voornaam", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("voornaam")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("voornaam"))
+                  }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-6" }, [
+            _c("label", { attrs: { for: "familienaam" } }, [
+              _vm._v("familienaam")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.familienaam,
+                  expression: "form.familienaam"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                placeholder: "familienaam",
+                name: "familienaam",
+                id: "familienaam"
+              },
+              domProps: { value: _vm.form.familienaam },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "familienaam", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("familienaam")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("familienaam"))
+                  }
+                })
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "form-group col-md-10" }, [
+            _c("label", { attrs: { for: "relatie" } }, [
+              _vm._v("relatie met klant")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.relatie,
+                  expression: "form.relatie"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "relatie", id: "relatie" },
+              domProps: { value: _vm.form.relatie },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "relatie", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("relatie")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("relatie"))
+                  }
+                })
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "form-group col-md-10" }, [
+            _c("label", { attrs: { for: "straat" } }, [_vm._v("straat")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.straat,
+                  expression: "form.straat"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "straat", id: "straat" },
+              domProps: { value: _vm.form.straat },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "straat", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("straat")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("straat"))
+                  }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-2" }, [
+            _c("label", { attrs: { for: "huisnummer" } }, [
+              _vm._v("huisnummer")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.huisnummer,
+                  expression: "form.huisnummer"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "huisnummer", id: "huisnummer" },
+              domProps: { value: _vm.form.huisnummer },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "huisnummer", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("huisnummer")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("huisnummer"))
+                  }
+                })
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "form-group col-md-3" }, [
+            _c("label", { attrs: { for: "bus" } }, [_vm._v("bus")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.bus,
+                  expression: "form.bus"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "bus", id: "bus" },
+              domProps: { value: _vm.form.bus },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "bus", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("bus")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: { textContent: _vm._s(_vm.form.errors.get("bus")) }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-3" }, [
+            _c("label", { attrs: { for: "postcode" } }, [_vm._v("postcode")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.postcode,
+                  expression: "form.postcode"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "postcode", id: "postcode" },
+              domProps: { value: _vm.form.postcode },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "postcode", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("postcode")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("postcode"))
+                  }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-5" }, [
+            _c("label", { attrs: { for: "gemeente" } }, [_vm._v("gemeente")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.gemeente,
+                  expression: "form.gemeente"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "gemeente", id: "gemeente" },
+              domProps: { value: _vm.form.gemeente },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "gemeente", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("gemeente")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("gemeente"))
+                  }
+                })
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "form-group col-md-3" }, [
+            _c("label", { attrs: { for: "telefoon" } }, [_vm._v("telefoon")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.telefoon,
+                  expression: "form.telefoon"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "telefoon", id: "telefoon" },
+              domProps: { value: _vm.form.telefoon },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "telefoon", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("telefoon")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("telefoon"))
+                  }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-3" }, [
+            _c("label", { attrs: { for: "gsm" } }, [_vm._v("gsm")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.gsm,
+                  expression: "form.gsm"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "gsm", id: "gsm" },
+              domProps: { value: _vm.form.gsm },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "gsm", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("gsm")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: { textContent: _vm._s(_vm.form.errors.get("gsm")) }
+                })
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group col-md-5" }, [
+            _c("label", { attrs: { for: "email" } }, [_vm._v("email")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.email,
+                  expression: "form.email"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "text", name: "email", id: "email" },
+              domProps: { value: _vm.form.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "email", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("email")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("email"))
+                  }
+                })
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "input-group" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-check form-check-inline" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.rubriek,
+                    expression: "form.rubriek"
+                  }
+                ],
+                staticClass: "form-check-input",
+                attrs: {
+                  type: "radio",
+                  name: "rubriek",
+                  id: "rubriek",
+                  value: "hotel"
+                },
+                domProps: { checked: _vm._q(_vm.form.rubriek, "hotel") },
+                on: {
+                  change: function($event) {
+                    return _vm.$set(_vm.form, "rubriek", "hotel")
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "label",
+                { staticClass: "form-check-label", attrs: { for: "rubriek" } },
+                [_vm._v("hotel")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-check form-check-inline" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.rubriek,
+                    expression: "form.rubriek"
+                  }
+                ],
+                staticClass: "form-check-input",
+                attrs: {
+                  type: "radio",
+                  name: "rubriek",
+                  id: "rubriek",
+                  value: "dagverblijf"
+                },
+                domProps: { checked: _vm._q(_vm.form.rubriek, "dagverblijf") },
+                on: {
+                  change: function($event) {
+                    return _vm.$set(_vm.form, "rubriek", "dagverblijf")
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "label",
+                { staticClass: "form-check-label", attrs: { for: "rubriek" } },
+                [_vm._v("dagverblijf")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-check form-check-inline" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.rubriek,
+                    expression: "form.rubriek"
+                  }
+                ],
+                staticClass: "form-check-input",
+                attrs: {
+                  type: "radio",
+                  name: "rubriek",
+                  id: "rubriek",
+                  value: "therapie"
+                },
+                domProps: { checked: _vm._q(_vm.form.rubriek, "therapie") },
+                on: {
+                  change: function($event) {
+                    return _vm.$set(_vm.form, "rubriek", "therapie")
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "label",
+                { staticClass: "form-check-label", attrs: { for: "rubriek" } },
+                [_vm._v("therapie")]
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "form-group col-md-12" }, [
+            _c("label", { attrs: { for: "vraag" } }, [_vm._v("Stel je vraag")]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.vraag,
+                  expression: "form.vraag"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { rows: "5", name: "vraag" },
+              domProps: { value: _vm.form.vraag },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "vraag", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _vm.form.errors.has("vraag")
+              ? _c("div", {
+                  staticClass: "invalid-feedback",
+                  domProps: {
+                    textContent: _vm._s(_vm.form.errors.get("vraag"))
+                  }
+                })
+              : _vm._e()
+          ])
+        ]),
+        _vm._v(" "),
+        _vm._m(2)
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "jumbotron jumbotron-fluid p-1" }, [
+      _c("p", { staticStyle: { "font-size": "1.3rem" } }, [
+        _vm._v("\n\t\tBeste contactpersoon,"),
+        _c("br"),
+        _vm._v(
+          "\n\t\tIn dit formulier vragen we heel wat persoonlijke gegevens,\n\t\tmaar we willen je graag contacteren om een intake gesprek\n\t\tte hebben. Zo kunnen we beter op je vragen antwoorden.\n\t\t"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("span", { staticClass: "input-group-text" }, [_vm._v("Rubriek")]),
+      _vm._v("  \n\t        ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "control" }, [
+      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Verzend")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -49023,6 +49833,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('vraagformulier', __webpack_require__(/*! ./components/VraagFormulier.vue */ "./resources/js/components/VraagFormulier.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49030,7 +49841,30 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    form: new Form({
+      voornaam: '',
+      familienaam: '',
+      relatie: '',
+      straat: '',
+      huisnummer: '',
+      bus: '',
+      postcode: '',
+      gemeente: '',
+      telefoon: '',
+      gsm: '',
+      email: '',
+      rubriek: '',
+      vraag: ''
+    })
+  },
+  methods: {
+    vermelden: function vermelden(data) {
+      console.log('contactpersoon formulier ingevuld');
+      window.location = 'https://vleugels.test';
+    }
+  }
 });
 
 /***/ }),
@@ -49039,9 +49873,12 @@ var app = new Vue({
 /*!***********************************!*\
   !*** ./resources/js/bootstrap.js ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_Form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utilities/Form */ "./resources/js/utilities/Form.js");
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -49077,6 +49914,9 @@ if (token) {
 } else {
   console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
+
+
+window.Form = _utilities_Form__WEBPACK_IMPORTED_MODULE_0__["default"];
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -49159,6 +49999,260 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/VraagFormulier.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/VraagFormulier.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _VraagFormulier_vue_vue_type_template_id_26c9cc0a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VraagFormulier.vue?vue&type=template&id=26c9cc0a& */ "./resources/js/components/VraagFormulier.vue?vue&type=template&id=26c9cc0a&");
+/* harmony import */ var _VraagFormulier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VraagFormulier.vue?vue&type=script&lang=js& */ "./resources/js/components/VraagFormulier.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _VraagFormulier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VraagFormulier_vue_vue_type_template_id_26c9cc0a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VraagFormulier_vue_vue_type_template_id_26c9cc0a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/VraagFormulier.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/VraagFormulier.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/VraagFormulier.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VraagFormulier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./VraagFormulier.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VraagFormulier.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VraagFormulier_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/VraagFormulier.vue?vue&type=template&id=26c9cc0a&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/VraagFormulier.vue?vue&type=template&id=26c9cc0a& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VraagFormulier_vue_vue_type_template_id_26c9cc0a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./VraagFormulier.vue?vue&type=template&id=26c9cc0a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VraagFormulier.vue?vue&type=template&id=26c9cc0a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VraagFormulier_vue_vue_type_template_id_26c9cc0a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VraagFormulier_vue_vue_type_template_id_26c9cc0a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/utilities/Errors.js":
+/*!******************************************!*\
+  !*** ./resources/js/utilities/Errors.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Errors =
+/*#__PURE__*/
+function () {
+  function Errors() {
+    _classCallCheck(this, Errors);
+
+    this.errors = {};
+  }
+
+  _createClass(Errors, [{
+    key: "get",
+    value: function get(field) {
+      // console.log(this.errors);
+      // console.log("\n" + this.errors);
+      if (this.errors[field]) {
+        return this.errors[field][0];
+      }
+    }
+  }, {
+    key: "has",
+    value: function has(field) {
+      // console.log("field =" + field + " en errors = " + errors);
+      return this.errors.hasOwnProperty(field);
+    }
+  }, {
+    key: "any",
+    value: function any() {
+      return Object.keys(this.errors).length > 0;
+    }
+  }, {
+    key: "record",
+    value: function record(errors) {
+      this.errors = errors; // console.log("recorded  " + this.errors + "\n");
+    }
+  }, {
+    key: "clear",
+    value: function clear(field) {
+      if (field) {
+        delete this.errors[field];
+        return;
+      }
+
+      this.errors = {};
+    }
+  }]);
+
+  return Errors;
+}();
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (Errors);
+
+/***/ }),
+
+/***/ "./resources/js/utilities/Form.js":
+/*!****************************************!*\
+  !*** ./resources/js/utilities/Form.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Errors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Errors */ "./resources/js/utilities/Errors.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var Form =
+/*#__PURE__*/
+function () {
+  function Form(data) {
+    _classCallCheck(this, Form);
+
+    this.originalData = data;
+
+    for (var field in data) {
+      this[field] = data[field];
+    }
+
+    this.errors = new _Errors__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  }
+
+  _createClass(Form, [{
+    key: "data",
+    value: function data() {
+      var data = {}; //Object.assign({},this);
+      //delete data.originalData;
+      //delete data.errors;
+
+      for (var property in this.originalData) {
+        data[property] = this[property];
+      }
+
+      return data;
+    }
+  }, {
+    key: "reset",
+    value: function reset() {
+      for (var field in this.originalData) {
+        this[field] = '';
+      }
+
+      this.errors.clear();
+    }
+  }, {
+    key: "post",
+    value: function post(url) {
+      return this.submit('post', url);
+    }
+  }, {
+    key: "put",
+    value: function put(url) {
+      return this.submit('put', url);
+    }
+  }, {
+    key: "patch",
+    value: function patch(url) {
+      return this.submit('patch', url);
+    }
+  }, {
+    key: "delete",
+    value: function _delete(url) {
+      return this.submit('delete', url);
+    }
+  }, {
+    key: "submit",
+    value: function submit(requestType, url) {
+      var _this = this;
+
+      /*    axios[requestType](url, data())
+               .then( this.onSuccess.bind(this))
+               .catch( this.onFail.bind(this))
+        */
+      return new Promise(function (resolve, reject) {
+        axios[requestType](url, _this.data()).then(function (response) {
+          _this.onSuccess(response.data);
+
+          resolve(response.data);
+        })["catch"](function (error) {
+          _this.onFail(error.response.data.errors);
+
+          reject(error.response.data);
+        });
+      });
+    }
+  }, {
+    key: "onSuccess",
+    value: function onSuccess(data) {
+      this.reset();
+    }
+  }, {
+    key: "onFail",
+    value: function onFail(errors) {
+      this.errors.record(errors);
+    }
+  }]);
+
+  return Form;
+}();
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (Form);
 
 /***/ }),
 

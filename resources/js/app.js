@@ -21,6 +21,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('vraagformulier', require('./components/VraagFormulier.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,5 +30,30 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    
+    data:{
+        form: new Form({
+            voornaam : '',
+            familienaam: '',
+            relatie: '',
+            straat: '',
+            huisnummer: '',
+            bus: '',
+            postcode:'',
+            gemeente:'',
+            telefoon:'',
+            gsm:'',
+            email:'',
+            rubriek : '',
+            vraag: '',         
+        })
+    },
+    
+    methods:{
+        vermelden(data){
+            console.log('contactpersoon formulier ingevuld');
+            window.location = 'https://vleugels.test';
+        }
+    }
 });

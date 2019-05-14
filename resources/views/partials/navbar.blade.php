@@ -17,7 +17,7 @@
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('intakes/create') }}">Stel je vraag</a>
+                        <a class="nav-link" href="{{ url('contactpersonen/create') }}">Stel je vraag</a>
                     </li>
                 @else
                    <!-- aangemeld als admin of klant -->
